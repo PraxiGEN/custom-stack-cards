@@ -1,7 +1,10 @@
 import { LitElement, html, css } from "lit";
 import { repeat } from "lit/directives/repeat.js";
 
-const VERSION = "v1.0.9-lit.1";
+// import { LitElement, html, css } from "https://unpkg.com/lit@3.3.1/index.js?module";
+// import { repeat } from "https://unpkg.com/lit@3.3.1/directives/repeat.js?module";
+
+const VERSION = "v1.1.0-lit";
 
 console.log(
   `%cCustom Stack Cards ${VERSION}`,
@@ -49,8 +52,8 @@ class BaseStackInCard extends LitElement {
     /* 内部子卡片的容器，强制过渡动画关闭 */
     .stack > * { 
       flex: 1 1 auto; 
-      min-height: 0; 
-      min-width: 0; 
+      min-height: auto; 
+      min-width: auto; 
       width: 100%;
       transition: none !important; 
     }
