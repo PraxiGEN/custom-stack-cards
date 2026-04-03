@@ -1,8 +1,8 @@
-// import { LitElement, html, css } from "lit";
-// import { repeat } from "lit/directives/repeat.js";
+import { LitElement, html, css } from "lit";
+import { repeat } from "lit/directives/repeat.js";
 
-import { LitElement, html, css } from "https://unpkg.com/lit@3.3.1/index.js?module";
-import { repeat } from "https://unpkg.com/lit@3.3.1/directives/repeat.js?module";
+// import { LitElement, html, css } from "https://unpkg.com/lit@3.3.1/index.js?module";
+// import { repeat } from "https://unpkg.com/lit@3.3.1/directives/repeat.js?module";
 
 const VERSION = "v1.1.0-lit";
 
