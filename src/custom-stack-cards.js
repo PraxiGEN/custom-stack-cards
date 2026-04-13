@@ -4,7 +4,7 @@ import { repeat } from "lit/directives/repeat.js";
 // import { LitElement, html, css } from "https://unpkg.com/lit@3.3.1/index.js?module";
 // import { repeat } from "https://unpkg.com/lit@3.3.1/directives/repeat.js?module";
 
-const VERSION = "v1.1.0-lit";
+const VERSION = "v1.1.1-lit";
 
 console.log(
   `%cCustom Stack Cards ${VERSION}`,
@@ -53,7 +53,7 @@ class BaseStackInCard extends LitElement {
     .stack > * { 
       flex: 1 1 auto; 
       min-height: auto; 
-      min-width: auto; 
+      min-width: 0; 
       width: 100%;
       transition: none !important; 
     }
