@@ -8,7 +8,7 @@ export default defineConfig({
       formats: ["es"],
       fileName: () => "custom-stack-cards.js",
     },
-    outDir: ".", 
+    outDir: "dist", 
     emptyOutDir: false,
     minify: "terser",
     terserOptions: {
