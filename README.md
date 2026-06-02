@@ -6,6 +6,9 @@
 
 ---
 
+![AdGuardHome](img/AdGuardHome.jpeg)
+![Portainer](img/Portainer.jpeg)
+
 ## 特性
 
 - 垂直堆叠：`custom:vertical-stack-in-card`  
