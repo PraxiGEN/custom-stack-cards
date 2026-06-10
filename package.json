@@ -1,6 +1,6 @@
 {
   "name": "custom-stack-cards",
-  "version": "1.1.1-lit",
+  "version": "1.1.2-lit",
   "type": "module",
   "main": "custom-stack-cards.js",
   "module": "custom-stack-cards.js",
