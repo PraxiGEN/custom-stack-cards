@@ -2,6 +2,11 @@
 
 # Custom Stack Cards
 
+[![Release](https://img.shields.io/github/v/release/hzonz/custom-stack-cards)](https://github.com/hzonz/custom-stack-cards/releases)
+[![License](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/custom-stack-cards/blob/main/LICENSE)
+[![HACS Custom](https://img.shields.io/badge/HACS-Custom-orange.svg)](https://github.com/hacs/integration)
+![](https://komarev.com/ghpvc/?username=hzonz&color=ff69b4)
+
 **Custom Stack Cards** 是 Home Assistant 的自定义卡片库，提供 **Vertical**  **Horizontal** **Grid** 三种卡片类型。它允许在单个 `<ha-card>` 内堆叠多个卡片，支持自定义样式，并保留原生 UI 编辑器功能。相比官方堆叠卡片，它去掉了多余的边框与阴影，让界面更简洁。
 
 ---
