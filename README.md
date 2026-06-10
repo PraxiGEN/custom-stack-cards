@@ -2,6 +2,11 @@
 
 # Custom Stack Cards
 
+[![Release](https://img.shields.io/github/v/release/hzonz/custom-stack-cards)](https://github.com/hzonz/custom-stack-cards/releases)
+[![License](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/custom-stack-cards/blob/main/LICENSE)
+[![HACS Custom](https://img.shields.io/badge/HACS-Custom-orange.svg)](https://github.com/hacs/integration)
+![](https://komarev.com/ghpvc/?username=hzonz&color=ff69b4)
+
 **Custom Stack Cards** is a custom card library for Home Assistant, providing three types of cards: **Vertical**, **Horizontal**, and **Grid**. It allows stacking multiple cards within a single `<ha-card>`, supports custom styling, and preserves the native UI editor functionality. Compared to the official stack cards, it removes extra borders and shadows, resulting in a cleaner interface.
 
 ---
