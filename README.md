@@ -6,6 +6,9 @@
 
 ---
 
+![AdGuardHome](img/AdGuardHome.jpeg)
+![Portainer](img/Portainer.jpeg)
+
 ## Features
 
 - Vertical stack: `custom:vertical-stack-in-card`  
