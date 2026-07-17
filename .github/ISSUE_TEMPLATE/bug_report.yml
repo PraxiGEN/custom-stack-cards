@@ -1,0 +1,81 @@
+name: 🐛 Bug Report / 报告问题
+description: Report a bug / 报告问题
+
+body:
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description / 问题描述
+      description: |
+        Describe what happened.
+        描述发生的问题。
+    validations:
+      required: true
+
+
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps to reproduce / 复现步骤
+      description: |
+        Describe how to reproduce the issue.
+        描述如何复现问题。
+      placeholder: |
+        1. Add card...
+        2. Configure card...
+        3. See error...
+
+
+  - type: input
+    id: ha_version
+    attributes:
+      label: Home Assistant Version / Home Assistant 版本
+      description: |
+        Settings → About
+        设置 → 关于 Home Assistant
+      placeholder: "2026.3.0"
+    validations:
+      required: true
+
+
+  - type: input
+    id: card_version
+    attributes:
+      label: Card Version / 卡片版本
+      description: |
+        Card version from installed resource.
+        已安装资源中的卡片版本。
+      placeholder: "1.0.0"
+    validations:
+      required: true
+
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional Information / 其他说明
+      description: |
+        Provide any additional information, including:
+        - Card YAML configuration
+        - Screenshots
+        - Browser console logs
+        - Other useful details
+
+        请提供其他相关信息，包括：
+        - 卡片 YAML 配置
+        - 截图
+        - 浏览器控制台日志
+        - 其他有帮助的信息
+
+      placeholder: |
+        Card YAML:
+
+        ```yaml
+        type: custom:example-card
+        entity: sensor.example
+        ```
+
+        Screenshots / Logs:
+        Paste screenshots or logs here.
+        请在此处粘贴截图或日志。
