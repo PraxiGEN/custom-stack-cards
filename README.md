@@ -2,10 +2,10 @@
 
 # Custom Stack Cards
 
-[![Release](https://img.shields.io/github/v/release/hzonz/custom-stack-cards)](https://github.com/hzonz/custom-stack-cards/releases)
+[![Release](https://img.shields.io/github/v/release/PraxiGEN/custom-stack-cards)](https://github.com/PraxiGEN/custom-stack-cards/releases)
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/custom-stack-cards/blob/main/LICENSE)
 [![HACS Custom](https://img.shields.io/badge/HACS-Custom-orange.svg)](https://github.com/hacs/integration)
-![](https://komarev.com/ghpvc/?username=hzonz&color=ff69b4)
+![](https://komarev.com/ghpvc/?username=PraxiGEN&color=ff69b4)
 
 **Custom Stack Cards** is a custom card library for Home Assistant, providing three types of cards: **Vertical**, **Horizontal**, and **Grid**. It allows stacking multiple cards within a single `<ha-card>`, supports custom styling, and preserves the native UI editor functionality. Compared to the official stack cards, it removes extra borders and shadows, resulting in a cleaner interface.
 
@@ -34,7 +34,7 @@
 2. Click the top-right **“Custom Repository”** button  
 3. Enter the repository URL:  
 ```yaml
-https://github.com/hzonz/custom-stack-cards
+https://github.com/PraxiGEN/custom-stack-cards
 ```
 4. Select **Dashboard** as the category, then add  
 5. Search for **Custom Stack Cards** and install  
@@ -86,5 +86,5 @@ cards:
 `styles:` only applies to the root card; for child cards, please use `card_mod`.
 
 ## Links
-- Repository：[hzonz/custom-stack-cards](https://github.com/hzonz/custom-stack-cards)
+- Repository：[PraxiGEN/custom-stack-cards](https://github.com/PraxiGEN/custom-stack-cards)
 - Original project:[ofekashery/vertical-stack-in-card ](https://github.com/ofekashery/vertical-stack-in-card) —— Thanks to the original author [ofekasher](https://github.com/ofekasher) for the open-source contribution.
