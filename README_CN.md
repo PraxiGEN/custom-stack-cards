@@ -2,10 +2,10 @@
 
 # Custom Stack Cards
 
-[![Release](https://img.shields.io/github/v/release/hzonz/custom-stack-cards)](https://github.com/hzonz/custom-stack-cards/releases)
+[![Release](https://img.shields.io/github/v/release/PraxiGEN/custom-stack-cards)](https://github.com/PraxiGEN/custom-stack-cards/releases)
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/custom-stack-cards/blob/main/LICENSE)
 [![HACS Custom](https://img.shields.io/badge/HACS-Custom-orange.svg)](https://github.com/hacs/integration)
-![](https://komarev.com/ghpvc/?username=hzonz&color=ff69b4)
+![](https://komarev.com/ghpvc/?username=PraxiGEN&color=ff69b4)
 
 **Custom Stack Cards** 是 Home Assistant 的自定义卡片库，提供 **Vertical**  **Horizontal** **Grid** 三种卡片类型。它允许在单个 `<ha-card>` 内堆叠多个卡片，支持自定义样式，并保留原生 UI 编辑器功能。相比官方堆叠卡片，它去掉了多余的边框与阴影，让界面更简洁。
 
@@ -34,7 +34,7 @@
 2. 点击右上角 **“添加存储库 (Custom Repository)”**  
 3. 填入仓库 URL:  
 ```yaml
-https://github.com/hzonz/custom-stack-cards
+https://github.com/PraxiGEN/custom-stack-cards
 ```
 4. 类型选择 **Dashboard**，然后添加  
 5. 搜索 **Custom Stack Cards** 并安装  
@@ -86,5 +86,5 @@ cards:
 `styles: `只支持根卡片，子卡片请使用`card_mod`。
 
 ## 链接
-- 仓库地址：[hzonz/custom-stack-cards](https://github.com/hzonz/custom-stack-cards)
+- 仓库地址：[PraxiGEN/custom-stack-cards](https://github.com/PraxiGEN/custom-stack-cards)
 - 原始项目：[ofekashery/vertical-stack-in-card ](https://github.com/ofekashery/vertical-stack-in-card) —— 感谢原作者 [ofekasher](https://github.com/ofekasher) 的开源贡献
