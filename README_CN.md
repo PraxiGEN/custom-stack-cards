@@ -1,4 +1,4 @@
-> For English version, see [English](README.en.md)
+> For English version, see [English](README.md)
 
 # Custom Stack Cards
 
