@@ -4,8 +4,7 @@
 
 [![Release](https://img.shields.io/github/v/release/PraxiGEN/custom-stack-cards)](https://github.com/PraxiGEN/custom-stack-cards/releases)
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/custom-stack-cards/blob/main/LICENSE)
-[![HACS Custom](https://img.shields.io/badge/HACS-Custom-orange.svg)](https://github.com/hacs/integration)
-![](https://komarev.com/ghpvc/?username=PraxiGEN&color=ff69b4)
+[![HACS](https://img.shields.io/badge/HACS-Default-blue.svg)](https://github.com/hacs/plugin)
 
 **Custom Stack Cards** is a custom card library for Home Assistant, providing three types of cards: **Vertical**, **Horizontal**, and **Grid**. It allows stacking multiple cards within a single `<ha-card>`, supports custom styling, and preserves the native UI editor functionality. Compared to the official stack cards, it removes extra borders and shadows, resulting in a cleaner interface.
 
@@ -28,30 +27,45 @@
 
 ## Installation
 
-### Using HACS (Recommended)
+### Using [HACS](https://hacs.xyz/) (Recommended)
 
-1. Open the HACS page in Home Assistant  
-2. Click the top-right **“Custom Repository”** button  
-3. Enter the repository URL:  
-```yaml
-https://github.com/PraxiGEN/custom-stack-cards
-```
-4. Select **Dashboard** as the category, then add  
-5. Search for **Custom Stack Cards** and install  
+ One-click installation from HACS: 
+
+[![Open your Home Assistant instance and open the Custom Stack Cards inside the Home Assistant Community Store.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=PraxiGEN&repository=custom-stack-cards&category=plugin)
+
+**Or manually:**
+
+1. Open Home Assistant
+2. Go to HACS
+3. In the search box, type **"Custom Stack Cards"**
+4. Click "Download"
 
 ### Manual Installation
 
 1. Download the `custom-stack-cards.js` file  
-2. Place it in the `www` folder, for example:  
-```yaml
-www/custom-stack-cards/custom-stack-cards.js
-```
-3. Reference it in your Lovelace configuration:  
-```yaml
-resources:
-  - url: /local/custom-stack-cards/custom-stack-cards.js
-    type: module
-```
+2. Copy to Home Assistant:
+
+  - Move the downloaded file to your Home Assistant configuration directory:
+  ```yaml
+  <config>/www/
+  ```
+  - If the folder doesn't exist, create it first `www`
+
+3. Add the resource:
+
+[![Open your Home Assistant instance and show your dashboard resources.](https://my.home-assistant.io/badges/lovelace_resources.svg)](https://my.home-assistant.io/redirect/lovelace_resources/)
+
+  - Go to Settings → Dashboards
+  - Click ⋮ (three dots menu) in the top right,and pick Resources.
+  - Click the + Add Resource button
+  - Enter:  
+    - URL: /local/custom-stack-cards.js?v=0.0.1  
+    - Resource type: JavaScript Module
+  - Click Create
+
+4. Restart Home Assistant Frontend:
+  - Refresh your browser cache
+  - If issues persist, restart Home Assistant
 
 ---
 

@@ -4,8 +4,7 @@
 
 [![Release](https://img.shields.io/github/v/release/PraxiGEN/custom-stack-cards)](https://github.com/PraxiGEN/custom-stack-cards/releases)
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/custom-stack-cards/blob/main/LICENSE)
-[![HACS Custom](https://img.shields.io/badge/HACS-Custom-orange.svg)](https://github.com/hacs/integration)
-![](https://komarev.com/ghpvc/?username=PraxiGEN&color=ff69b4)
+[![HACS](https://img.shields.io/badge/HACS-Default-blue.svg)](https://github.com/hacs/plugin)
 
 **Custom Stack Cards** 是 Home Assistant 的自定义卡片库，提供 **Vertical**  **Horizontal** **Grid** 三种卡片类型。它允许在单个 `<ha-card>` 内堆叠多个卡片，支持自定义样式，并保留原生 UI 编辑器功能。相比官方堆叠卡片，它去掉了多余的边框与阴影，让界面更简洁。
 
@@ -28,30 +27,45 @@
 
 ## 安装
 
-### 使用 HACS（推荐）
+### 使用 [HACS](https://hacs.xyz/) (推荐)
 
-1. 打开 Home Assistant 的 HACS 页面  
-2. 点击右上角 **“添加存储库 (Custom Repository)”**  
-3. 填入仓库 URL:  
-```yaml
-https://github.com/PraxiGEN/custom-stack-cards
-```
-4. 类型选择 **Dashboard**，然后添加  
-5. 搜索 **Custom Stack Cards** 并安装  
+ One-click installation from HACS: 
+
+[![在 Home Assistant 社区商店中打开 Custom Stack Cards。](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=PraxiGEN&repository=custom-stack-cards&category=plugin)
+
+**或者手动操作：**
+
+1. 打开 Home Assistant
+2. 前往 **HACS**
+3. 在搜索框中输入 **"Custom Stack Cards"**
+4. 点击 **“下载 (Download)”**
 
 ### 手动安装
 
-1. 下载 `custom-stack-cards.js` 文件  
-2. 放到 `www` 文件夹下，例如：  
-```yaml
-www/custom-stack-cards/custom-stack-cards.js
-```
-3. 在 Lovelace 配置中引用：  
-```yaml
-resources:
-  - url: /local/custom-stack-cards/custom-stack-cards.js
-    type: module
-```
+1. 下载 `custom-stack-cards.js` 文件。
+2. 复制到 Home Assistant：
+
+  - 将下载的文件移动到 Home Assistant 的配置目录（`<config>`）下的 `www` 文件夹中：
+  ```yaml
+  <config>/www/
+  ```
+  - 如果该文件夹不存在，请先手动创建 www 文件夹。
+
+3. 添加资源引用：
+
+[![打开你的 Home Assistant 实例并查看你的仪表板资源。](https://my.home-assistant.io/badges/lovelace_resources.svg)](https://my.home-assistant.io/redirect/lovelace_resources/)
+
+  - 进入 设置 → 仪表盘
+  - 点击右上角的 ⋮（三个点菜单），然后选择 资源。
+  - 点击右下角的 + 添加资源 按钮。
+  - 在弹窗中输入以下内容：
+    - URL: /local/custom-stack-cards.js?v=0.0.1  
+    - Resource type: JavaScript Module
+  - 点击 创建。
+
+4. 重启 Home Assistant 前端：
+  - 刷新浏览器缓存
+  - 如果问题仍然存在，请尝试重启 Home Assistant 实例。
 
 ---
 
