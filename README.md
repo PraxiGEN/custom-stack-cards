@@ -22,6 +22,8 @@
 - Full compatibility with the native UI editor  
 - Removes default borders and shadows
 - Default support for `Sections` view  
+- Child card sizing via `grid_options` (control each child card's width/height ratio)
+- Bilingual card names & descriptions in the card picker (English / 简体中文)
 
 ---
 
@@ -96,8 +98,70 @@ cards:
 
 ---
 
+## Child Card Sizing
+
+> Available since `v1.1.x`. Inspired by [`nested-lovelace-card`](https://github.com/Liquidmasl/nested-lovelace-card#child-card-sizing-with-grid_options).
+
+You can control the **width / height ratio of each child card inside the stack** by adding `grid_options` to the **child card's own config** (not the stack card). The field name mirrors Home Assistant's sections `grid_options`, but the semantics are **relative weights**, not a 12-column grid.
+
+> **Important — relative weight, not 12-column:** `columns` / `rows` here are **proportional weights**, not the absolute column count used by HA sections view.  
+> e.g. `columns: 3` + `columns: 1` = a **3:1 ratio** (children take 75% / 25% width), not "3 columns + 1 column". To get 1/4 + 3/4, write `columns: 1` + `columns: 3`. A single child always fills the full width of the parent (flex-basis: 0 + grow).
+
+### Vertical stack — `rows`
+
+```yaml
+type: custom:vertical-stack-in-card
+cards:
+  - type: entities
+    entities: [...]
+    grid_options:
+      rows: 2        # takes twice the height (shared proportionally)
+  - type: gauge
+    entity: sensor.temperature
+    grid_options:
+      rows: 1
+```
+
+> The proportional `rows` effect only shows when the parent is given a fixed height (e.g. dragged taller in sections view, or `styles.card.height` set). In masonry / panel auto-height layouts it falls back to content height.
+
+### Horizontal stack — `columns`
+
+```yaml
+type: custom:horizontal-stack-in-card
+cards:
+  - type: weather-forecast
+    grid_options:
+      columns: 3     # takes 3 parts of width (default 1)
+  - type: custom:mini-graph-card
+    # no columns → takes 1 part (3:1 with above)
+```
+
+### Grid stack — `columns` / `rows` (span)
+
+```yaml
+type: custom:grid-stack-in-card
+columns: 12          # number of grid tracks (default 1)
+cards:
+  - type: entities
+    grid_options:
+      columns: 6     # spans 6 tracks (= half width); rows spans rows
+  - type: gauge
+    grid_options:
+      columns: 6
+```
+
+#### Mode reference
+
+| Mode | Child `grid_options` | Effect |
+| --- | --- | --- |
+| vertical | `rows` | children with `rows` share remaining height proportionally; without it, content height |
+| horizontal | `columns` | relative flex weight for width (default 1 = equal) |
+| grid | `columns` / `rows` | `grid-column` / `grid-row` span value (default 1; `columns` capped by the stack's own `columns` track count) |
+
+---
+
 ## Notes
-`styles:` only applies to the root card; for child cards, please use `card_mod`.
+`styles:` only applies to the root card; for child cards, please use `uix / card_mod`.
 
 ## Links
 - Repository：[PraxiGEN/custom-stack-cards](https://github.com/PraxiGEN/custom-stack-cards)
