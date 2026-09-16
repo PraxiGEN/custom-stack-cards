@@ -1,6 +1,6 @@
 import { LitElement, html, css } from "lit";
 import { repeat } from "lit/directives/repeat.js";
-const VERSION = "v1.1.3-lit";
+const VERSION = "v1.1.4-lit";
 
 console.log(
   `%cCustom Stack Cards ${VERSION}`,
@@ -18,14 +18,7 @@ class BaseStackInCard extends LitElement {
     :host { -webkit-tap-highlight-color: transparent;}
     ha-card { display: flex; flex-direction: column; height: 100%; overflow: hidden; }
     .card-title { font-size: 1.2em; font-weight: bold; padding: 12px 16px 0; margin: 0; }
-    .stack { display: flex; flex: 1; align-items: center; width: 100%;
-      --ha-card-border-width: 0px !important;
-      --ha-card-box-shadow: none !important;
-      --ha-card-border-radius: 0px !important;
-      --ha-card-border-color: rgba(0,0,0,0) !important;
-      --ha-card-background: none !important;
-      --ha-card-box-shadow: none !important;
-    }
+    .stack { display: flex; flex: 1; align-items: center; width: 100%; }
     .stack.vertical { flex-direction: column; }
     .stack.horizontal { flex-direction: row; }
     .stack.grid { display: grid; gap: 8px; width: 100%; }
