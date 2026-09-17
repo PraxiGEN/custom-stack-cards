@@ -20,7 +20,7 @@ Related Issue / 关联 Issue: #123
  -->
 
 - HA Version / HA版本: 
-- Integration Version / 集成版本: 
+- Card Version / 卡片版本: 
 - Test Result / 测试结果: 
 
 ## Checklist / 自检清单

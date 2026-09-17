@@ -1,6 +1,6 @@
 import { LitElement, html, css } from "lit";
 import { repeat } from "lit/directives/repeat.js";
-const VERSION = "v1.1.4-lit";
+const VERSION = "v1.1.3-lit";
 
 console.log(
   `%cCustom Stack Cards ${VERSION}`,
